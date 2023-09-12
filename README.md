@@ -1,2 +1,1 @@
-# snake-game
-Basit Yılan Oyunu 
+# Yılan Oyunu
