@@ -1,0 +1,70 @@
+body {
+	font-family: Arial;
+	background: #000;
+	color: #7cf20a;
+	text-align: center;
+	padding-top: 50px;
+    padding: 50px 0;
+}
+
+.score {
+	border: 4px dashed #7cf20a;
+	font-size: 0;
+	width: 520px;
+  max-width: 100%;
+	margin: 0 auto 20px;
+	padding: 10px 0;
+	text-align: left;
+	background: #191919;
+
+	span {
+		width: 50%;
+		display: inline-block;
+		font-size: 20px;
+		text-indent: 20px;
+	}
+}
+
+canvas {
+	display: block;
+	margin: 0 auto;
+  max-width: 100%;
+	border: 4px dashed #7cf20a;
+	background: #191919;
+
+	&.gameover {
+		animation: shake 1s ease-in-out;
+	}
+
+	&.flash {
+		animation: flash 0.2s ease-in-out;
+	}
+}
+
+p {
+	.has-focus & {
+		display: none;
+	}
+}
+
+@keyframes flash {
+	0%, 100% {
+		background: #191919;
+	}
+
+	30% {
+		background: #1f1f1f;
+	}
+}
+
+@keyframes shake {
+	0%, 20%, 40%, 60%, 80% {
+		transform: translateX(-10px);
+	}
+	10%, 30%, 50%, 70%, 90% {
+		transform: translateX(10px);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
